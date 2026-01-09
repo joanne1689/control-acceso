@@ -11,6 +11,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useAppSelector } from '../../hooks/loginHooks';
 import moment from 'moment';
 import httpClient from '../../hooks/CapacitorClient';
+import arrowLeftIcon from '../../assets/images/arrow-left.svg';
 
 const QRView: React.FC = () => {
   const effectRan = useRef(false);
@@ -96,22 +97,11 @@ const QRView: React.FC = () => {
                     onClick={handleBack}
                   >
                     {/* Arrow left icon */}
-                    <svg 
-                      className="qr-back-icon" 
-                      width="16" 
-                      height="16" 
-                      viewBox="0 0 16 16" 
-                      fill="none" 
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path 
-                        d="M10.6666 8H5.33325M5.33325 8L8 10.6667M5.33325 8L8 5.33333" 
-                        stroke="#2A6E90" 
-                        strokeWidth="2" 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    <img 
+                      src={arrowLeftIcon} 
+                      alt="Back" 
+                      className="qr-back-icon"
+                    />
                     <span className="qr-back-text">Volver al inicio</span>
                   </IonButton>
                 </div>

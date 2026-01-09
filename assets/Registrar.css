@@ -1,0 +1,706 @@
+/* Crear Usuario / Registrar Page - Pixel Perfect Implementation from Figma */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+/* Page and Content */
+.registrar-page {
+  --background: #FFFFFF;
+}
+
+.registrar-content {
+  --background: #FFFFFF;
+}
+
+/* Crear Usuario - Main Container */
+.registrar-container {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 40px;
+  
+  position: relative;
+  width: 320px;
+  height: 568px;
+  margin: 0 auto;
+  
+  background: #FFFFFF;
+}
+
+/* Frame 381 - Main Section */
+.registrar-main-section {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  
+  width: 320px;
+  height: 446px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 403 - Header */
+.registrar-header {
+  box-sizing: border-box;
+  
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  
+  width: 320px;
+  height: 64px;
+  
+  border-bottom: 1px solid #CDD5D5;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 404 - Header Inner */
+.registrar-header-inner {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 320px;
+  height: 48px;
+  
+  border-radius: 0px 0px 12px 12px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 410 - Back Button Container */
+.registrar-back-container {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
+  
+  width: 320px;
+  height: 48px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Button - Back Button */
+.registrar-back-button {
+  box-sizing: border-box;
+  
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  
+  width: 137px;
+  height: 32px;
+  
+  border: 1px solid #FBFCFC;
+  border-radius: 8px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+  
+  /* Ionic overrides */
+  --background: transparent;
+  --background-hover: rgba(42, 110, 144, 0.1);
+  --background-activated: rgba(42, 110, 144, 0.15);
+  --border-radius: 8px;
+  --border-width: 1px;
+  --border-style: solid;
+  --border-color: #FBFCFC;
+  --box-shadow: none;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+}
+
+.registrar-back-button::part(native) {
+  padding: 8px;
+  gap: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Arrow left - Back Icon */
+.registrar-back-icon {
+  width: 16px;
+  height: 16px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  
+  display: block;
+  object-fit: contain;
+}
+
+/* Button - Back Text */
+.registrar-back-text {
+  width: 97px;
+  height: 14px;
+  
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  /* identical to box height, or 14px */
+  
+  color: #2A6E90;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Frame 356 - Content Area */
+.registrar-content-area {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 16px;
+  gap: 16px;
+  
+  width: 320px;
+  height: 366px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 373 - Form Container */
+.registrar-form-container {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 288px;
+  height: 366px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 387 - Title Section */
+.registrar-title-section {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+  
+  width: 288px;
+  height: 46px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Crear Usuario - Title */
+.registrar-title {
+  width: 288px;
+  height: 25px;
+  
+  /* H6 Mobile */
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  /* or 25px */
+  
+  color: #000000;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  
+  margin: 0;
+}
+
+/* Subtitle */
+.registrar-subtitle {
+  width: 288px;
+  height: 17px;
+  
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  /* identical to box height, or 17px */
+  
+  color: rgba(0, 0, 0, 0.6);
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  
+  margin: 0;
+}
+
+/* form - Form Row */
+.registrar-form-row {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  
+  width: 288px;
+  height: 38px;
+  
+  /* Inside auto layout */
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 1 - Input Frame */
+.registrar-input-frame {
+  box-sizing: border-box;
+  
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 8px;
+  gap: 10px;
+  
+  width: 288px;
+  height: 38px;
+  
+  /* Default/white */
+  background: #FFFFFF;
+  border: 1px solid #CDD5D5;
+  border-radius: 5px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+/* Input Field - United States placeholder style */
+.registrar-input {
+  width: 272px;
+  height: 20px;
+  
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  display: flex;
+  align-items: center;
+  
+  color: #212222;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  
+  /* Ionic overrides */
+  --background: transparent;
+  --border-width: 0;
+  --border-style: none;
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --placeholder-color: #828787;
+  --placeholder-opacity: 1;
+  --highlight-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.registrar-input::part(native) {
+  padding: 0;
+  height: 20px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* Frame 398 - Dropdown Row */
+.registrar-dropdown-row {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 288px;
+  height: 36px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 5;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 399 - Date Row */
+.registrar-date-row {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 288px;
+  height: 36px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 6;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Dropdown */
+.registrar-dropdown {
+  box-sizing: border-box;
+  
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px;
+  
+  width: 140px;
+  height: 36px;
+  
+  /* Default/white */
+  background: #FFFFFF;
+  /* Default/gray/300 */
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+/* Frame 1 - Dropdown Inner */
+.registrar-dropdown-inner {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 124px;
+  height: 20px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  
+  position: relative;
+}
+
+/* Select Element - Options text */
+.registrar-select {
+  width: auto;
+  height: 20px;
+  
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  
+  color: #828787;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  
+  /* Ionic overrides */
+  --background: transparent;
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --placeholder-color: #828787;
+  --placeholder-opacity: 1;
+  margin: 0;
+  min-height: 20px;
+  max-height: 20px;
+}
+
+.registrar-select::part(text) {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #828787;
+}
+
+.registrar-select::part(icon) {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+/* Icon/Solid/cheveron-down */
+.registrar-chevron-icon {
+  width: 20px;
+  height: 20px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Date Label - Inicio/Fin text */
+.registrar-date-label {
+  width: auto;
+  height: 20px;
+  
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  
+  color: #828787;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Calendar Icon */
+.registrar-calendar-icon {
+  width: 14px;
+  height: 14px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Hidden Date Input */
+.registrar-date-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Button - Submit Button */
+.registrar-submit-button {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  
+  width: 288px;
+  height: 40px;
+  
+  background: #2A6E90;
+  border-radius: 8px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 7;
+  align-self: stretch;
+  flex-grow: 0;
+  
+  margin: 0;
+  
+  /* Typography for button text */
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: #F5F5F5;
+  
+  /* Ionic overrides */
+  --background: #2A6E90;
+  --background-hover: #245d7a;
+  --background-activated: #1e4f68;
+  --border-radius: 8px;
+  --box-shadow: none;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --color: #F5F5F5;
+}
+
+.registrar-submit-button::part(native) {
+  padding: 12px;
+  gap: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: #F5F5F5;
+}
+
+/* Button - Submit Text */
+.registrar-submit-text {
+  width: 105px;
+  height: 16px;
+  
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+  
+  color: #F5F5F5;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  
+  display: inline-block;
+}
+
+/* Ionic Input overrides - ensure no default borders */
+.registrar-input.sc-ion-input-md-h,
+.registrar-input.sc-ion-input-ios-h {
+  --background: transparent;
+  --padding-start: 0;
+  --padding-end: 0;
+  min-height: 20px;
+  height: 20px;
+}
+
+/* Override Ionic's default input wrapper styles */
+.registrar-form-row ion-input {
+  --border-width: 0;
+  --highlight-height: 0;
+}
+
+/* Focus states */
+.registrar-input-frame:focus-within {
+  border-color: #2A6E90;
+  outline: none;
+}
+
+.registrar-dropdown:focus-within {
+  border-color: #2A6E90;
+  outline: none;
+}
+
+/* Responsive adjustments */
+@media (min-width: 321px) {
+  .registrar-container {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .registrar-main-section,
+  .registrar-header,
+  .registrar-header-inner,
+  .registrar-back-container,
+  .registrar-content-area {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}

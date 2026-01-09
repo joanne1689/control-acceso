@@ -11,7 +11,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useAppSelector } from '../../hooks/loginHooks';
 import moment from 'moment';
 import httpClient from '../../hooks/CapacitorClient';
-import arrowLeftIcon from '../../assets/images/arrow-left.svg';
+import Header from '../components/Header';
 
 const QRView: React.FC = () => {
   const effectRan = useRef(false);
@@ -87,26 +87,8 @@ const QRView: React.FC = () => {
         <div className="qr-container">
           {/* Main Section */}
           <div className="qr-main-section">
-            {/* Header with back button */}
-            <div className="qr-header">
-              <div className="qr-header-inner">
-                <div className="qr-back-container">
-                  <IonButton 
-                    className="qr-back-button" 
-                    fill="clear" 
-                    onClick={handleBack}
-                  >
-                    {/* Arrow left icon */}
-                    <img 
-                      src={arrowLeftIcon} 
-                      alt="Back" 
-                      className="qr-back-icon"
-                    />
-                    <span className="qr-back-text">Volver al inicio</span>
-                  </IonButton>
-                </div>
-              </div>
-            </div>
+            {/* Header */}
+            <Header variant="back" onBack={handleBack} />
 
             {/* Content Area */}
             <div className="qr-content-area">

@@ -1,0 +1,568 @@
+/* VisitaQR Page - Invitación-2 */
+
+/* Page Container */
+.visitaqr-page {
+  --background: #FFFFFF;
+}
+
+.visitaqr-content {
+  --background: #FFFFFF;
+}
+
+/* Invitación-2 Container */
+.visitaqr-container {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 40px;
+  
+  position: relative;
+  width: 320px;
+  height: 568px;
+  margin: 0 auto;
+  
+  background: #FFFFFF;
+}
+
+/* Frame 381 - Main Section */
+.visitaqr-main-section {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  
+  width: 320px;
+  height: 485px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 403 - Header */
+.visitaqr-header {
+  box-sizing: border-box;
+  
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  
+  width: 320px;
+  height: 64px;
+  
+  border-bottom: 1px solid #CDD5D5;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 404 - Header Inner */
+.visitaqr-header-inner {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 320px;
+  height: 48px;
+  
+  border-radius: 0px 0px 12px 12px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 410 - Back Container */
+.visitaqr-back-container {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
+  
+  width: 320px;
+  height: 48px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Button - Back */
+.visitaqr-back-button {
+  box-sizing: border-box;
+  
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  
+  width: 137px;
+  height: 32px;
+  
+  border: 1px solid #FBFCFC;
+  border-radius: 8px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  
+  --background: transparent;
+  --background-hover: transparent;
+  --background-activated: transparent;
+  --background-focused: transparent;
+  --border-color: #FBFCFC;
+  --border-width: 1px;
+  --border-style: solid;
+  --border-radius: 8px;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  --box-shadow: none;
+  margin: 0;
+}
+
+/* Arrow left icon */
+.visitaqr-back-icon {
+  width: 16px;
+  height: 16px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Button text */
+.visitaqr-back-text {
+  width: 97px;
+  height: 14px;
+  
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  /* identical to box height, or 14px */
+  
+  color: #2A6E90;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  
+  text-transform: none;
+}
+
+/* Frame 356 - Content Area */
+.visitaqr-content-area {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 16px;
+  gap: 16px;
+  
+  width: 320px;
+  height: 357px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 373 - Content Container */
+.visitaqr-content-container {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  
+  width: 288px;
+  height: 357px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 387 - Title Section */
+.visitaqr-title-section {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+  
+  width: 288px;
+  height: 53px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Invitar - Title */
+.visitaqr-title {
+  width: 288px;
+  height: 25px;
+  
+  /* H6 Mobile */
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  /* or 25px */
+  
+  color: #000000;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  
+  margin: 0;
+  padding: 0;
+}
+
+/* Frame 391 - Progress Container */
+.visitaqr-progress-container {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 288px;
+  height: 24px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 390 - Step 1 */
+.visitaqr-step-1 {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0px;
+  gap: 2px;
+  
+  width: 150px;
+  height: 24px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Frame 389 - Step 2 */
+.visitaqr-step-2 {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0px;
+  gap: 2px;
+  
+  width: 130px;
+  height: 24px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+/* Step Text */
+.visitaqr-step-text {
+  width: 100%;
+  height: 17px;
+  
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 140%;
+  /* identical to box height, or 17px */
+  
+  color: #5F6363;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  
+  margin: 0;
+  padding: 0;
+}
+
+/* Progress Bar Base */
+.visitaqr-progress-bar {
+  width: 100%;
+  height: 5px;
+  
+  border-radius: 100px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Progress Bar - Complete (Step 1 in step 2) */
+.visitaqr-progress-bar-complete {
+  background: #2A6E90;
+}
+
+/* Progress Bar - Active (Step 2 in step 2) */
+.visitaqr-progress-bar-active {
+  background: #84C5DC;
+}
+
+/* Frame 407 - QR Section */
+.visitaqr-qr-section {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 288px;
+  height: 288px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 391 - QR Container */
+.visitaqr-qr-container {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 288px;
+  height: 240px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Rectangle 107 - QR Image */
+.visitaqr-qr-image {
+  width: 240px;
+  height: 240px;
+  
+  border-radius: 8px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  
+  object-fit: contain;
+}
+
+/* Frame 406 - Share Buttons Row */
+.visitaqr-share-row {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 288px;
+  height: 40px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Button - Share (WhatsApp/Email) */
+.visitaqr-share-button {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  
+  width: 140px;
+  height: 40px;
+  
+  background: #FBFCFC;
+  border: 1px solid #CDD5D5;
+  border-radius: 8px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  
+  --background: #FBFCFC;
+  --background-hover: #F0F2F2;
+  --background-activated: #E8EAEA;
+  --border-color: #CDD5D5;
+  --border-width: 1px;
+  --border-style: solid;
+  --border-radius: 8px;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --box-shadow: none;
+  margin: 0;
+}
+
+/* Share Icon */
+.visitaqr-share-icon {
+  width: 16px;
+  height: 16px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Button - Download */
+.visitaqr-download-button {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  
+  width: 288px;
+  height: 32px;
+  
+  border-radius: 8px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  
+  --background: transparent;
+  --background-hover: rgba(42, 110, 144, 0.1);
+  --background-activated: rgba(42, 110, 144, 0.2);
+  --border-radius: 8px;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  --box-shadow: none;
+  margin: 0;
+}
+
+/* Download Icon */
+.visitaqr-download-icon {
+  width: 16px;
+  height: 16px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Download Button Text */
+.visitaqr-download-text {
+  width: 92px;
+  height: 14px;
+  
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  /* identical to box height, or 14px */
+  
+  color: #2A6E90;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  
+  text-transform: none;
+}
+
+/* Ionic Button Overrides */
+ion-button.visitaqr-back-button::part(native) {
+  padding: 8px;
+  gap: 8px;
+}
+
+ion-button.visitaqr-share-button::part(native) {
+  padding: 12px;
+  gap: 8px;
+}
+
+ion-button.visitaqr-download-button::part(native) {
+  padding: 8px;
+  gap: 8px;
+}

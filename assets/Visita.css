@@ -1,0 +1,1000 @@
+/* Visita Page - Invitación-1 */
+/* Pixel-perfect implementation based on Figma design */
+
+/* Import Manrope font */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+/* Page Container */
+.visita-page {
+  --background: #FFFFFF;
+}
+
+.visita-content {
+  --background: #FFFFFF;
+}
+
+/* Invitación-1 - Main Container */
+.visita-container {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 40px;
+  
+  position: relative;
+  width: 320px;
+  height: 568px;
+  margin: 0 auto;
+  
+  background: #FFFFFF;
+}
+
+/* Frame 381 - Main Section */
+.visita-main-section {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  
+  width: 320px;
+  height: 539px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 403 - Header with border */
+.visita-header {
+  box-sizing: border-box;
+  
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  
+  width: 320px;
+  height: 64px;
+  
+  border-bottom: 1px solid #CDD5D5;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 404 */
+.visita-header-inner {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 320px;
+  height: 48px;
+  
+  border-radius: 0px 0px 12px 12px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 410 */
+.visita-back-container {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
+  
+  width: 320px;
+  height: 48px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Button - Back Button */
+.visita-back-button {
+  box-sizing: border-box;
+  
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  
+  width: 137px;
+  height: 32px;
+  
+  border: 1px solid #FBFCFC;
+  border-radius: 8px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  
+  background: transparent;
+  --background: transparent;
+  --background-hover: transparent;
+  --background-activated: rgba(42, 110, 144, 0.1);
+  --border-color: #FBFCFC;
+  --box-shadow: none;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  margin: 0;
+}
+
+.visita-back-button::part(native) {
+  padding: 8px;
+  gap: 8px;
+}
+
+/* Arrow left icon */
+.visita-back-icon {
+  width: 16px;
+  height: 16px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Button text */
+.visita-back-text {
+  width: 97px;
+  height: 14px;
+  
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  /* identical to box height, or 14px */
+  
+  color: #2A6E90;
+  text-transform: none;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Frame 356 - Content Area */
+.visita-content-area {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 16px;
+  gap: 16px;
+  
+  width: 320px;
+  height: 459px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 373 - Form Container */
+.visita-form-container {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 288px;
+  height: 459px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 387 - Title Section */
+.visita-title-section {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+  
+  width: 288px;
+  height: 53px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Invitar - Title */
+.visita-title {
+  width: 288px;
+  height: 25px;
+  
+  /* H6 Mobile */
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  /* or 25px */
+  
+  color: #000000;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  
+  margin: 0;
+}
+
+/* Frame 390 - Progress Steps Container */
+.visita-progress-container {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 288px;
+  height: 24px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 390 - Step 1 */
+.visita-step {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0px;
+  gap: 2px;
+  
+  height: 24px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.visita-step-1 {
+  width: 150px;
+}
+
+.visita-step-2 {
+  width: 130px;
+  flex-grow: 1;
+  order: 1;
+}
+
+/* Step text */
+.visita-step-text {
+  width: 100%;
+  height: 17px;
+  
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 140%;
+  /* identical to box height, or 17px */
+  
+  color: #5F6363;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  
+  margin: 0;
+}
+
+/* Rectangle 107 - Progress bar */
+.visita-progress-bar {
+  width: 100%;
+  height: 5px;
+  
+  border-radius: 100px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.visita-progress-bar-active {
+  background: #84C5DC;
+}
+
+.visita-progress-bar-inactive {
+  background: #CDD5D5;
+}
+
+/* form - Input Row */
+.visita-form-row {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  
+  width: 288px;
+  height: 38px;
+  
+  /* Inside auto layout */
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Form row order - matching Figma */
+.visita-form-row.visita-form-row-1 {
+  order: 1;
+}
+
+.visita-form-row.visita-form-row-2 {
+  order: 2;
+}
+
+.visita-form-row.visita-form-row-3 {
+  order: 3;
+}
+
+.visita-form-row.visita-form-row-4 {
+  order: 4;
+}
+
+/* Frame 1 - Input Field */
+.visita-input {
+  box-sizing: border-box;
+  
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 8px;
+  gap: 10px;
+  
+  width: 288px;
+  height: 38px;
+  
+  /* Default/white */
+  background: #FFFFFF !important;
+  border: 1px solid #CDD5D5 !important;
+  border-top: 1px solid #CDD5D5 !important;
+  border-bottom: 1px solid #CDD5D5 !important;
+  border-left: 1px solid #CDD5D5 !important;
+  border-right: 1px solid #CDD5D5 !important;
+  border-radius: 5px !important;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  
+  /* Ionic overrides */
+  --background: #FFFFFF;
+  --border-color: #CDD5D5 !important;
+  --border-radius: 5px !important;
+  --border-width: 1px !important;
+  --border-style: solid !important;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --highlight-color-focused: #CDD5D5;
+  --highlight-color-valid: #CDD5D5;
+  --highlight-color-invalid: #CDD5D5;
+  --highlight-height: 0px;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* United States - Input text styling */
+.visita-input::part(native) {
+  width: 272px;
+  height: 20px;
+  
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  display: flex;
+  align-items: center;
+  
+  color: #828787;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.visita-input input::placeholder {
+  color: #828787;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* Frame 398 - Dropdown Row */
+.visita-dropdown-row {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 288px;
+  height: 36px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 5;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 399 - Date Row */
+.visita-date-row {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 288px;
+  height: 36px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 6;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Dropdown */
+.visita-dropdown {
+  box-sizing: border-box;
+  
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px;
+  
+  width: 140px;
+  height: 36px;
+  
+  /* Default/white */
+  background: #FFFFFF;
+  /* Default/gray/300 */
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  
+  cursor: pointer;
+  position: relative;
+}
+
+/* Frame 1 - Dropdown Inner */
+.visita-dropdown-inner {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  
+  width: 124px;
+  height: 20px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  
+  position: relative;
+}
+
+/* Select Element */
+.visita-select {
+  width: auto;
+  height: 20px;
+  
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  
+  color: #828787;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  
+  /* Ionic overrides */
+  --background: transparent;
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --placeholder-color: #828787;
+  --placeholder-opacity: 1;
+  margin: 0;
+  min-height: 20px;
+  max-height: 20px;
+}
+
+.visita-select::part(text) {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #828787;
+}
+
+.visita-select::part(icon) {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+/* Icon/Solid/cheveron-down */
+.visita-chevron-icon {
+  width: 20px;
+  height: 20px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Date Label text */
+.visita-date-label {
+  width: auto;
+  height: 20px;
+  
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  
+  color: #828787;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Calendar icon */
+.visita-calendar-icon {
+  width: 14px;
+  height: 14px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* form - Textarea/Message */
+.visita-textarea-row {
+  box-sizing: border-box;
+  
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 12px 8px;
+  gap: 10px;
+  
+  width: 288px;
+  height: 78px;
+  
+  /* Default/white */
+  background: #FFFFFF;
+  border: 1px solid #CDD5D5;
+  border-radius: 5px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 7;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.visita-textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  
+  color: #828787;
+  background: transparent;
+}
+
+.visita-textarea::placeholder {
+  width: 117px;
+  height: 20px;
+  color: #828787;
+  text-align: center;
+}
+
+/* Button - Submit Button */
+.visita-submit-button {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  
+  width: 288px;
+  height: 40px;
+  
+  background: #2A6E90;
+  border-radius: 8px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 8;
+  align-self: stretch;
+  flex-grow: 0;
+  
+  margin: 0;
+  
+  /* Typography for button text */
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: #F5F5F5;
+  
+  /* Ionic overrides */
+  --background: #2A6E90;
+  --background-hover: #245d7a;
+  --background-activated: #1e4f68;
+  --border-radius: 8px;
+  --box-shadow: none;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --color: #F5F5F5;
+}
+
+.visita-submit-button::part(native) {
+  padding: 12px;
+  gap: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: #F5F5F5;
+}
+
+/* Button - Submit Text */
+.visita-submit-text {
+  width: 105px;
+  height: 16px;
+  
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
+  
+  color: #F5F5F5;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  
+  display: inline-block;
+  text-transform: none;
+}
+
+/* Hidden Date Input */
+.visita-date-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Ionic Input Overrides */
+ion-input.visita-input {
+  box-sizing: border-box !important;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --background: #FFFFFF;
+  --color: #212222;
+  --placeholder-color: #828787;
+  --placeholder-opacity: 1;
+  --border-style: solid !important;
+  --border-width: 1px !important;
+  --border-color: #CDD5D5 !important;
+  --border-radius: 5px !important;
+  --highlight-color-focused: #CDD5D5;
+  --highlight-color-valid: #CDD5D5;
+  --highlight-color-invalid: #CDD5D5;
+  --highlight-height: 0px;
+  min-height: 38px;
+  height: 38px !important;
+  max-height: 38px;
+  width: 288px;
+  border: 1px solid #CDD5D5 !important;
+  border-top: 1px solid #CDD5D5 !important;
+  border-bottom: 1px solid #CDD5D5 !important;
+  border-left: 1px solid #CDD5D5 !important;
+  border-right: 1px solid #CDD5D5 !important;
+  border-radius: 5px !important;
+  background: #FFFFFF !important;
+  overflow: hidden !important;
+}
+
+ion-input.visita-input::part(native) {
+  width: 272px;
+  height: 20px;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #828787;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+ion-input.visita-input .input-wrapper {
+  padding: 12px 8px;
+  border: none !important;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+ion-input.visita-input .native-wrapper {
+  border: none !important;
+  display: flex;
+  align-items: center;
+}
+
+ion-input.visita-input input {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: #212222 !important;
+  width: 272px;
+  height: 20px;
+}
+
+ion-input.visita-input input::placeholder {
+  color: #828787 !important;
+  opacity: 1 !important;
+}
+
+/* Remove Ionic's default highlight/underline */
+ion-input.visita-input.has-focus,
+ion-input.visita-input.ion-focused,
+ion-input.visita-input.ion-valid,
+ion-input.visita-input.ion-invalid,
+ion-input.visita-input.has-value {
+  --highlight-height: 0px;
+  border: 1px solid #CDD5D5 !important;
+  border-top: 1px solid #CDD5D5 !important;
+  border-bottom: 1px solid #CDD5D5 !important;
+  border-left: 1px solid #CDD5D5 !important;
+  border-right: 1px solid #CDD5D5 !important;
+}
+
+/* Ionic Select Overrides */
+ion-select.visita-select {
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  min-height: 20px;
+  max-height: 20px;
+}
+
+/* Ionic Textarea Overrides */
+ion-textarea.visita-textarea-input {
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --background: #FFFFFF;
+  --color: #212222;
+  --placeholder-color: #828787;
+  --placeholder-opacity: 1;
+  --border-style: solid !important;
+  --border-width: 1px !important;
+  --border-color: #CDD5D5 !important;
+  --border-radius: 5px !important;
+  --highlight-color-focused: #CDD5D5;
+  --highlight-color-valid: #CDD5D5;
+  --highlight-color-invalid: #CDD5D5;
+  --highlight-height: 0px;
+  min-height: 78px;
+  height: 78px !important;
+  max-height: 78px;
+  width: 288px;
+  border: 1px solid #CDD5D5 !important;
+  border-top: 1px solid #CDD5D5 !important;
+  border-bottom: 1px solid #CDD5D5 !important;
+  border-left: 1px solid #CDD5D5 !important;
+  border-right: 1px solid #CDD5D5 !important;
+  border-radius: 5px !important;
+  background: #FFFFFF !important;
+  margin: 0;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+ion-textarea.visita-textarea-input::part(native) {
+  border: none !important;
+  box-shadow: none !important;
+  padding: 12px 8px !important;
+  height: 100% !important;
+  max-height: 76px !important;
+}
+
+ion-textarea.visita-textarea-input .textarea-wrapper {
+  border: none !important;
+  height: 100% !important;
+  max-height: 76px !important;
+}
+
+ion-textarea.visita-textarea-input .native-wrapper {
+  border: none !important;
+  height: 100% !important;
+  max-height: 76px !important;
+}
+
+ion-textarea.visita-textarea-input .textarea-wrapper-inner {
+  border: none !important;
+  height: 100% !important;
+  max-height: 76px !important;
+}
+
+ion-textarea.visita-textarea-input textarea {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: #212222 !important;
+  height: auto !important;
+  max-height: 54px !important;
+}
+
+ion-textarea.visita-textarea-input textarea::placeholder {
+  color: #828787 !important;
+  opacity: 1 !important;
+}
+
+/* Remove Ionic's default highlight/underline for textarea */
+ion-textarea.visita-textarea-input.has-focus,
+ion-textarea.visita-textarea-input.ion-focused,
+ion-textarea.visita-textarea-input.ion-valid,
+ion-textarea.visita-textarea-input.ion-invalid,
+ion-textarea.visita-textarea-input.has-value {
+  --highlight-height: 0px;
+  border: 1px solid #CDD5D5 !important;
+  border-top: 1px solid #CDD5D5 !important;
+  border-bottom: 1px solid #CDD5D5 !important;
+  border-left: 1px solid #CDD5D5 !important;
+  border-right: 1px solid #CDD5D5 !important;
+}
+
+/* Form row order classes */
+.visita-title-section { order: 0; }
+.visita-form-row-1 { order: 1; }
+.visita-form-row-2 { order: 2; }
+.visita-form-row-3 { order: 3; }
+.visita-form-row-4 { order: 4; }
+.visita-dropdown-row { order: 5; }
+.visita-date-row { order: 6; }
+ion-textarea.visita-textarea-input { order: 7; }
+.visita-textarea-row { order: 7; }
+ion-button.visita-submit-button { order: 8; }
+.visita-submit-button { order: 8; }

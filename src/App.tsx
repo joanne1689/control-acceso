@@ -40,6 +40,7 @@ import Login from './pages/Login';
 import NewPassword from './pages/NewPassword';
 import Registrar from './pages/Registrar';
 import Visita from './pages/Visita';
+import VisitaQR from './pages/VisitaQR';
 
 setupIonicReact();
 
@@ -53,6 +54,7 @@ const App: React.FC = () => {
           <ProtectedRoleRoute exact path="/modpass" component={NewPassword} roles={["SAD", "ADM", "PRO", "OFC", "ENC", "RES"]} />
           <ProtectedRoleRoute exact path="/registry" component={Registrar} roles={["SAD", "ADM", "PRO", "ENC"]} />
           <ProtectedRoleRoute exact path="/visit" component={Visita} roles={["SAD", "ADM", "PRO", "ENC", "RES"]} />
+          <ProtectedRoleRoute exact path="/visit-qr" component={VisitaQR} roles={["SAD", "ADM", "PRO", "ENC", "RES"]} />
           <Route exact path="/login" component={Login} />
           <Redirect exact from="/" to="/login" />
         </IonRouterOutlet>

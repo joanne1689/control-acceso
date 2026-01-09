@@ -1,0 +1,181 @@
+/* Header Component Styles */
+
+/* ===== HOME VARIANT ===== */
+/* Frame 403 - Header section 320x140px */
+.header-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 320px;
+  height: 140px;
+  border-radius: 0px 0px 12px 12px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 404 - Logo container with gradient 320x64px */
+.header-logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  margin: 0 auto;
+  width: 320px;
+  height: 64px;
+  background: linear-gradient(180deg, #FDE3E6 0%, #FFFFFF 100%);
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Logo 48x48px */
+.header-logo {
+  width: 48px;
+  height: 48px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Frame 410 - Greeting container 320x50px */
+.header-greeting-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
+  margin: 0 auto;
+  width: 320px;
+  height: 50px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* ===== BACK BUTTON VARIANT ===== */
+/* Frame 403 - Header */
+.header-back {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  width: 320px;
+  height: 64px;
+  border-bottom: 1px solid #CDD5D5;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 404 - Header Inner */
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 320px;
+  height: 48px;
+  border-radius: 0px 0px 12px 12px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 410 - Back Container */
+.header-back-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
+  width: 320px;
+  height: 48px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Button - Back */
+.header-back-button {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  min-width: 137px;
+  width: auto;
+  height: 32px;
+  border: 1px solid #FBFCFC;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  --background: transparent;
+  --background-hover: transparent;
+  --background-activated: transparent;
+  --background-focused: transparent;
+  --border-color: #FBFCFC;
+  --border-width: 1px;
+  --border-style: solid;
+  --border-radius: 8px;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  --box-shadow: none;
+  margin: 0;
+}
+
+/* Arrow left icon */
+.header-back-icon {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Button text */
+.header-back-text {
+  height: 14px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: #2A6E90;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+/* Ionic Button Overrides */
+ion-button.header-back-button::part(native) {
+  padding: 8px;
+  gap: 8px;
+}
+
+/* Common header section styles */
+.header-section {
+  width: 320px;
+  margin: 0 auto;
+}

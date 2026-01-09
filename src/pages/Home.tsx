@@ -4,6 +4,7 @@ import { useAppSelector } from '../../hooks/loginHooks';
 import { handleLogout } from '../../reducers/loginThunks';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../reducers/store';
+import Header from '../components/Header';
 
 const Home: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -67,31 +68,10 @@ const Home: React.FC = () => {
         {/* Home Container - 320x568px */}
         <div className="home-container">
           
-          {/* Frame 403 - Header section 320x140px */}
-          <div className="home-header-section">
-            
-            {/* Frame 404 - Logo container with gradient 320x64px */}
-            <div className="home-logo-container">
-              {/* Logo 48x48px */}
-              <svg className="home-logo" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M60 5C60 5 15 18 15 18V65C15 90 35 108 60 118C85 108 105 90 105 65V18L60 5Z" fill="#8B1538"/>
-                <path d="M60 10C60 10 20 22 20 22V63C20 85 38 102 60 111C82 102 100 85 100 63V22L60 10Z" fill="#A91D3A"/>
-                <g fill="#FFFFFF">
-                  <path d="M42 32H52V85H42V32Z"/>
-                  <path d="M52 32H72C78 32 83 37 83 43V50C83 56 78 61 72 61H52V51H70C72 51 73 50 73 48V45C73 43 72 42 70 42H52V32Z"/>
-                  <rect x="52" y="68" width="28" height="4" rx="2" opacity="0.7"/>
-                  <rect x="52" y="78" width="20" height="4" rx="2" opacity="0.5"/>
-                </g>
-                <circle cx="60" cy="95" r="5" fill="#3CBBB1"/>
-                <path d="M35 25L60 18L85 25" stroke="#3CBBB1" strokeWidth="3" strokeLinecap="round" fill="none"/>
-              </svg>
-            </div>
-
-            {/* Frame 410 - Greeting container 320x50px */}
-            <div className="home-greeting-container">
-              <h1 className="home-greeting">Hola, {username || 'Usuario'}!</h1>
-            </div>
-          </div>
+          {/* Header */}
+          <Header variant="home">
+            <h1 className="home-greeting">Hola, {username || 'Usuario'}!</h1>
+          </Header>
 
           {/* Frame 378 - Main content 320x264px */}
           <div className="home-main">

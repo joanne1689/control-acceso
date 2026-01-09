@@ -1,0 +1,361 @@
+/* Home Page - Pixel Perfect Implementation from Figma */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+.home-page {
+  --background: #FFFFFF;
+}
+
+.home-content {
+  --background: #FFFFFF;
+}
+
+/* Home Container - Main wrapper */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 0px 40px;
+  gap: 24px;
+  position: relative;
+  width: 320px;
+  min-height: 568px;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+
+/* Frame 403 - Header section */
+.home-header-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 320px;
+  height: 140px;
+  border-radius: 0px 0px 12px 12px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 404 - Logo container with gradient */
+.home-logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  margin: 0 auto;
+  width: 320px;
+  height: 64px;
+  background: linear-gradient(180deg, #FDE3E6 0%, #FFFFFF 100%);
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  box-sizing: border-box;
+}
+
+/* Logo */
+.home-logo {
+  width: 48px;
+  height: 48px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  object-fit: contain;
+}
+
+/* Frame 410 - Greeting container */
+.home-greeting-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
+  margin: 0 auto;
+  width: 320px;
+  height: 50px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  box-sizing: border-box;
+}
+
+/* Hola, Juan! */
+.home-greeting {
+  width: 288px;
+  height: 34px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  color: #000000;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  margin: 0;
+}
+
+/* Frame 378 - Main content area */
+.home-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 16px;
+  width: 320px;
+  height: 264px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  box-sizing: border-box;
+}
+
+/* Frame 402 - Cards wrapper */
+.home-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+  width: 288px;
+  height: 264px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 374 - Cards container */
+.home-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+  width: 288px;
+  height: 264px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 405 - Cards list */
+.home-cards-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+  width: 288px;
+  height: 264px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Form card wrapper */
+.home-card-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  width: 288px;
+  height: 80px;
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 1 - Card */
+.home-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 8px;
+  gap: 10px;
+  width: 288px;
+  height: 80px;
+  background: #FFFFFF;
+  border: 1px solid #CDD5D5 !important;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.home-card:hover {
+  background: #f8f9fa;
+}
+
+.home-card:active {
+  transform: scale(0.98);
+  background: #f0f1f2;
+}
+
+/* Card icon container */
+.home-card-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 16px;
+  height: 16px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.home-card-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.home-card-icon svg path,
+.home-card-icon svg rect {
+  stroke: #2A6E90;
+}
+
+/* Card title */
+.home-card-title {
+  width: 272px;
+  height: 25px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #2A6E90;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0;
+}
+
+/* Frame 380 - Footer section */
+.home-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  width: 320px;
+  height: 62px;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Logout button */
+.home-logout-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  width: 320px;
+  height: 32px;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.home-logout-button:hover {
+  background: rgba(42, 110, 144, 0.1);
+}
+
+.home-logout-button:active {
+  background: rgba(42, 110, 144, 0.2);
+}
+
+/* Logout icon */
+.home-logout-icon {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.home-logout-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.home-logout-icon svg path {
+  stroke: #2A6E90;
+  stroke-width: 2;
+}
+
+/* Logout text */
+.home-logout-text {
+  width: 93px;
+  height: 14px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: #2A6E90;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0;
+}
+
+/* Last login text */
+.home-last-login {
+  width: 171px;
+  height: 14px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 140%;
+  color: rgba(0, 0, 0, 0.5);
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* Loading spinner */
+.home-loading {
+  --background: rgba(255, 255, 255, 0.9);
+  --spinner-color: #2A6E90;
+}
+
+/* Responsive - Center on larger screens */
+@media (min-width: 321px) {
+  .home-container {
+    margin: 0 auto;
+  }
+}

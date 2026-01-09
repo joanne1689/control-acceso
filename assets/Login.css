@@ -1,0 +1,371 @@
+/* Login Page - Pixel Perfect Implementation from Figma */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+.login-page {
+  --background: #ffffff;
+}
+
+.login-content {
+  --background: #ffffff;
+}
+
+/* Login Container - Main wrapper */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 16px 40px;
+  gap: 24px;
+  isolation: isolate;
+  position: relative;
+  width: 320px;
+  min-height: 568px;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+
+/* Rectangle 103 - Header gradient */
+.login-header {
+  width: 320px;
+  height: 177px;
+  background: linear-gradient(180deg, #FDE3E6 0%, #FFFFFF 100%);
+  border-radius: 0px 0px 12.8px 12.8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  z-index: 0;
+  position: relative;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+/* Logo - Absolute positioned */
+.login-logo {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: 100px;
+  top: 39px;
+  z-index: 2;
+  object-fit: contain;
+}
+
+/* Frame 401 - Main content frame */
+.login-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  width: 288px;
+  height: 327px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 1;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+/* Frame 409 - Upper content wrapper */
+.login-upper-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  margin: 0 auto;
+  width: 288px;
+  height: 213.83px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 400 - Welcome text container */
+.login-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 288px;
+  height: 59px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Hola! */
+.login-title {
+  width: 288px;
+  height: 34px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  color: #000000;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0;
+}
+
+/* Completa con tus datos para ingresar */
+.login-subtitle {
+  width: 288px;
+  height: 17px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  color: rgba(0, 0, 0, 0.6);
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0;
+}
+
+/* Frame 356 - Input section container */
+.login-input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 6.83px;
+  width: 288px;
+  height: 82.83px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Form row wrapper */
+.login-form-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  width: 288px;
+  height: 38px;
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 1 - Input field */
+.login-input {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 10px;
+  width: 288px;
+  height: 38px;
+  background: #FFFFFF;
+  border: 1px solid #CDD5D5 !important;
+  border-radius: 5px;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  
+  /* Ionic overrides */
+  --background: #FFFFFF;
+  --border-color: #CDD5D5;
+  --border-radius: 5px;
+  --border-width: 0px;
+  --border-style: none;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  --placeholder-color: #828787;
+  --placeholder-opacity: 1;
+  --color: #000000;
+  --highlight-height: 0px;
+  --highlight-color-focused: transparent;
+  --highlight-color-valid: transparent;
+  --highlight-color-invalid: transparent;
+  
+  min-height: 38px;
+  max-height: 38px;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Remove Ionic's default border and highlight */
+.login-input.sc-ion-input-md-h,
+.login-input.sc-ion-input-ios-h {
+  --border-width: 0;
+  --highlight-height: 0;
+  border: 1px solid #CDD5D5 !important;
+}
+
+/* Target the native wrapper to ensure no double borders */
+.login-input .input-wrapper {
+  border: none !important;
+  background: transparent;
+}
+
+.login-input::part(native) {
+  height: 38px;
+  min-height: 38px;
+  padding: 12px 8px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  background: transparent;
+}
+
+/* Input placeholder text styling */
+.login-input input,
+.login-input input::placeholder {
+  font-family: 'Manrope', sans-serif !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #828787;
+}
+
+/* Focus state - keep same border */
+.login-input:focus-within,
+.login-input.has-focus {
+  border: 1px solid #2A6E90 !important;
+}
+
+.login-input.ion-touched.ion-invalid {
+  border: 1px solid #eb445a !important;
+}
+
+/* Frame 408 - Button section */
+.login-button-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 288px;
+  height: 40px;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Button - Primary */
+.login-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  width: 288px;
+  height: 40px;
+  background: #2A6E90;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  
+  /* Ionic overrides */
+  --background: #2A6E90;
+  --background-hover: #235d7a;
+  --background-activated: #1e5068;
+  --border-radius: 8px;
+  --box-shadow: none;
+  --color: #F5F5F5;
+  
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.login-button::part(native) {
+  border-radius: 8px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+/* Forgot password link button */
+.login-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  margin: 0 auto;
+  width: 288px;
+  height: 30px;
+  border-radius: 8px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.login-forgot-link {
+  width: 178px;
+  height: 14px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: #2A6E90;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.login-forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Loading spinner */
+.login-loading {
+  --background: rgba(255, 255, 255, 0.9);
+  --spinner-color: #2A6E90;
+}
+
+/* Responsive - Center on larger screens */
+@media (min-width: 321px) {
+  .login-container {
+    margin: 0 auto;
+  }
+  
+  .login-header {
+    width: 320px;
+    margin-left: calc((288px - 320px) / 2);
+    margin-right: calc((288px - 320px) / 2);
+  }
+}

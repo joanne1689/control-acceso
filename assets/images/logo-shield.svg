@@ -1,0 +1,37 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shield outline -->
+  <path d="M60 8C60 8 20 20 20 20C20 20 20 55 20 70C20 85 35 100 60 112C85 100 100 85 100 70C100 55 100 20 100 20C100 20 60 8 60 8Z" fill="#FFFFFF" stroke="#8B1538" stroke-width="4"/>
+  
+  <!-- Inner shield gradient -->
+  <defs>
+    <linearGradient id="shieldGradient" x1="60" y1="15" x2="60" y2="105" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#C41E3A"/>
+      <stop offset="100%" stop-color="#8B1538"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Main shield body -->
+  <path d="M60 12C60 12 25 23 25 23C25 23 25 55 25 68C25 82 38 95 60 106C82 95 95 82 95 68C95 55 95 23 95 23C95 23 60 12 60 12Z" fill="url(#shieldGradient)"/>
+  
+  <!-- White inner area -->
+  <path d="M60 20C60 20 32 29 32 29C32 29 32 55 32 66C32 78 43 89 60 98C77 89 88 78 88 66C88 55 88 29 88 29C88 29 60 20 60 20Z" fill="#FFFFFF" fill-opacity="0.15"/>
+  
+  <!-- Stylized letters/design inside -->
+  <g fill="#FFFFFF">
+    <!-- Central design element - stylized "P" or key symbol -->
+    <rect x="45" y="35" width="6" height="40" rx="2"/>
+    <rect x="45" y="35" width="25" height="6" rx="2"/>
+    <rect x="64" y="35" width="6" height="18" rx="2"/>
+    <rect x="45" y="47" width="25" height="6" rx="2"/>
+    
+    <!-- Horizontal bars representing access/security -->
+    <rect x="55" y="62" width="20" height="4" rx="1" fill-opacity="0.8"/>
+    <rect x="55" y="70" width="15" height="4" rx="1" fill-opacity="0.6"/>
+  </g>
+  
+  <!-- Accent elements -->
+  <circle cx="60" cy="90" r="4" fill="#4ECDC4" fill-opacity="0.9"/>
+  
+  <!-- Top accent line -->
+  <path d="M40 28L60 22L80 28" stroke="#4ECDC4" stroke-width="2" stroke-linecap="round" fill="none"/>
+</svg>

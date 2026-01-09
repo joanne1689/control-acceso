@@ -1,0 +1,504 @@
+/* QR Page - Pixel Perfect Implementation from Figma */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+.qr-page {
+  --background: #FFFFFF;
+}
+
+.qr-content {
+  --background: #FFFFFF;
+}
+
+/* QR Container - Main wrapper */
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 40px;
+  position: relative;
+  width: 320px;
+  min-height: 568px;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+
+/* Frame 381 - Main content section */
+.qr-main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  width: 320px;
+  height: 478px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 403 - Header with border */
+.qr-header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  width: 320px;
+  height: 64px;
+  border-bottom: 1px solid #CDD5D5;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 404 - Header inner */
+.qr-header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 320px;
+  height: 48px;
+  border-radius: 0px 0px 12px 12px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 410 - Back button container */
+.qr-back-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
+  width: 320px;
+  height: 48px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Back Button */
+.qr-back-button {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  width: 137px;
+  height: 32px;
+  border: 1px solid #FBFCFC;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  background: transparent;
+  cursor: pointer;
+  
+  /* Ionic overrides */
+  --background: transparent;
+  --background-hover: rgba(42, 110, 144, 0.1);
+  --background-activated: rgba(42, 110, 144, 0.15);
+  --border-radius: 8px;
+  --border-width: 1px;
+  --border-style: solid;
+  --border-color: #FBFCFC;
+  --box-shadow: none;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  margin: 0;
+}
+
+.qr-back-button::part(native) {
+  padding: 8px;
+  gap: 8px;
+}
+
+/* Back button icon */
+.qr-back-icon {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  color: #2A6E90;
+  stroke: #2A6E90;
+  stroke-width: 2px;
+}
+
+/* Back button text */
+.qr-back-text {
+  width: auto;
+  height: 14px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: #2A6E90;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Frame 356 - Content area */
+.qr-content-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 16px;
+  gap: 16px;
+  width: 320px;
+  height: 398px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 373 - Title section */
+.qr-title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 288px;
+  height: 49px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 387 - Title inner */
+.qr-title-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+  width: 288px;
+  height: 49px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* QR Title */
+.qr-title {
+  width: 288px;
+  height: 28px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  color: #000000;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0;
+}
+
+/* QR Subtitle */
+.qr-subtitle {
+  width: 288px;
+  height: 17px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  color: rgba(0, 0, 0, 0.6);
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0;
+}
+
+/* Frame 356 inner - QR display section */
+.qr-display-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 16px;
+  gap: 16px;
+  width: 288px;
+  height: 285px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  box-sizing: border-box;
+}
+
+/* Frame 373 - QR info container */
+.qr-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 256px;
+  height: 285px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* QR Image container */
+.qr-image-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+}
+
+.qr-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* Frame 367 - Name container */
+.qr-name-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 256px;
+  height: 25px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Name text */
+.qr-name {
+  width: 256px;
+  height: 25px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #212222;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  margin: 0;
+}
+
+/* Frame 382 - Time info container */
+.qr-time-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+  width: 256px;
+  height: 44px;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 372 - Valid from container */
+.qr-valid-from {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 256px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Frame 373 - Valid until container */
+.qr-valid-until {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 256px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Time text */
+.qr-time-text {
+  width: 256px;
+  height: 20px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #828787;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  margin: 0;
+}
+
+/* Download Button */
+.qr-download-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  width: 288px;
+  height: 32px;
+  border-radius: 8px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0 -16px;
+  box-sizing: border-box;
+  
+  /* Ionic overrides */
+  --background: transparent;
+  --background-hover: rgba(42, 110, 144, 0.1);
+  --background-activated: rgba(42, 110, 144, 0.15);
+  --border-radius: 8px;
+  --box-shadow: none;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+}
+
+.qr-download-button::part(native) {
+  padding: 8px;
+  gap: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Download icon */
+.qr-download-icon {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  color: #2A6E90;
+  stroke: #2A6E90;
+  stroke-width: 2px;
+}
+
+/* Download button text */
+.qr-download-text {
+  width: auto;
+  height: 14px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: #2A6E90;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Loading placeholder */
+.qr-loading-placeholder {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  background: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ionic overrides for IonImg */
+.qr-image-container ion-img {
+  width: 200px;
+  height: 200px;
+}
+
+.qr-image-container ion-img::part(image) {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (min-width: 321px) {
+  .qr-container {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .qr-main-section,
+  .qr-header,
+  .qr-header-inner,
+  .qr-back-container,
+  .qr-content-area {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,69 @@
+/* DatePicker Component Styles */
+
+/* DatePicker Container */
+.datepicker {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px;
+  width: 140px;
+  height: 36px;
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+}
+
+/* DatePicker Inner Container */
+.datepicker-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 100%;
+  height: 20px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* DatePicker Label */
+.datepicker-label {
+  height: 20px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #828787;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Calendar Icon */
+.datepicker-calendar-icon {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Hover state */
+.datepicker:hover {
+  background: #F9FAFB;
+}
+
+/* Active state */
+.datepicker:active {
+  background: #F3F4F6;
+}

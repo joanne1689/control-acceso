@@ -1,0 +1,95 @@
+/* Dropdown Component Styles */
+
+/* Dropdown Container */
+.dropdown {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px;
+  width: 140px;
+  height: 36px;
+  background: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 6px;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  position: relative;
+}
+
+/* Dropdown Inner Container */
+.dropdown-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 100%;
+  height: 20px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+/* Dropdown Select */
+.dropdown-select {
+  width: 100%;
+  height: 20px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #828787;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+  --background: transparent;
+  --padding-start: 0px;
+  --padding-end: 0px;
+  --padding-top: 0px;
+  --padding-bottom: 0px;
+  --placeholder-color: #828787;
+  --placeholder-opacity: 1;
+  margin: 0;
+  min-height: 20px;
+}
+
+/* Chevron Icon */
+.dropdown-chevron-icon {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Ionic Select Overrides */
+ion-select.dropdown-select::part(icon) {
+  display: none !important;
+}
+
+ion-select.dropdown-select::part(container) {
+  padding: 0;
+}
+
+ion-select.dropdown-select::part(text) {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #828787;
+}
+
+/* Disabled state */
+.dropdown-select:disabled {
+  opacity: 0.6;
+}

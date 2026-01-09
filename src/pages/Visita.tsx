@@ -1,13 +1,13 @@
-import { IonButton, IonContent, IonDatetime, IonInput, IonLoading, IonModal, IonPage, IonSelect, IonSelectOption, IonTextarea, useIonToast } from "@ionic/react";
-import { useRef, useState } from "react";
+import { IonButton, IonContent, IonInput, IonLoading, IonPage, IonTextarea, useIonToast } from "@ionic/react";
+import { useState } from "react";
 import { formatearRut, handleRutDown, validarDigV } from "../../utils/RutFormatter";
 import { useForm } from "react-hook-form";
 import moment from "moment";
 import { useAppSelector } from "../../hooks/loginHooks";
 import httpClient from "../../hooks/CapacitorClient";
 import Header from '../components/Header';
-import chevronDownIcon from '../../assets/images/chevron-down.svg';
-import calendarIcon from '../../assets/images/calendar.svg';
+import Dropdown from '../components/Dropdown';
+import DatePicker from '../components/DatePicker';
 import '../../assets/Visita.css';
 
 interface Campos {
@@ -28,8 +28,6 @@ const Visita: React.FC = () => {
   const { unidades } = useAppSelector((state) => state.login);
   const [loading, setLoading] = useState<boolean>(false);
   const form = useForm();
-  const modalInicio = useRef<HTMLIonModalElement>(null);
-  const modalFin = useRef<HTMLIonModalElement>(null);
   const [toast] = useIonToast();
   const initDate = moment();
   const [fechaInicio, setFechaInicio] = useState<string>(initDate.format("yyyy-MM-DDTHH:mm:ss"));
@@ -201,55 +199,47 @@ const Visita: React.FC = () => {
                 {/* Frame 398 - Dropdown Row */}
                 <div className="visita-dropdown-row">
                   {/* Dropdown 1 - Rol */}
-                  <div className="visita-dropdown">
-                    <div className="visita-dropdown-inner">
-                      <IonSelect
-                        className="visita-select"
-                        placeholder="Rol"
-                        interface="popover"
-                        {...form.register("rol")}
-                      >
-                        <IonSelectOption value="VIS">Visita</IonSelectOption>
-                      </IonSelect>
-                      <img src={chevronDownIcon} alt="Chevron" className="visita-chevron-icon" />
-                    </div>
-                  </div>
+                  <Dropdown
+                    placeholder="Rol"
+                    options={[{ value: "VIS", label: "Visita" }]}
+                    register={form.register("rol")}
+                    containerClassName="visita-dropdown"
+                    className="visita-select"
+                  />
 
                   {/* Dropdown 2 - Nro. Unidad */}
-                  <div className="visita-dropdown">
-                    <div className="visita-dropdown-inner">
-                      <IonSelect
-                        className="visita-select"
-                        placeholder="Nro. Unidad"
-                        interface="popover"
-                        {...form.register("nroUnidad")}
-                      >
-                        {(unidades || []).map(({ value, label }) => (
-                          <IonSelectOption key={`${label}_${value}`} value={value}>{label}</IonSelectOption>
-                        ))}
-                      </IonSelect>
-                      <img src={chevronDownIcon} alt="Chevron" className="visita-chevron-icon" />
-                    </div>
-                  </div>
+                  <Dropdown
+                    placeholder="Nro. Unidad"
+                    options={unidades || []}
+                    register={form.register("nroUnidad")}
+                    containerClassName="visita-dropdown"
+                    className="visita-select"
+                  />
                 </div>
 
                 {/* Frame 399 - Date Row */}
                 <div className="visita-date-row">
-                  {/* Date Picker 1 - Inicio */}
-                  <div className="visita-dropdown" onClick={() => modalInicio.current?.present()}>
-                    <div className="visita-dropdown-inner">
-                      <span className="visita-date-label">Inicio</span>
-                      <img src={calendarIcon} alt="Calendar" className="visita-calendar-icon" />
-                    </div>
-                  </div>
+                  {/* DatePicker - Inicio */}
+                  <DatePicker
+                    label="Inicio"
+                    value={fechaInicio}
+                    onChange={(e) => setFechaInicio(e.detail.value ? moment(e.detail.value.toString()).format("yyyy-MM-DDTHH:mm:ss") : "")}
+                    min={fechaMin}
+                    max={fechaMax}
+                    presentation="date-time"
+                    containerClassName="visita-dropdown"
+                  />
 
-                  {/* Date Picker 2 - Fin */}
-                  <div className="visita-dropdown" onClick={() => modalFin.current?.present()}>
-                    <div className="visita-dropdown-inner">
-                      <span className="visita-date-label">Fin</span>
-                      <img src={calendarIcon} alt="Calendar" className="visita-calendar-icon" />
-                    </div>
-                  </div>
+                  {/* DatePicker - Fin */}
+                  <DatePicker
+                    label="Fin"
+                    value={fechaFin}
+                    onChange={(e) => setFechaFin(e.detail.value ? moment(e.detail.value.toString()).format("yyyy-MM-DDTHH:mm:ss") : "")}
+                    min={fechaMin}
+                    max={fechaMax}
+                    presentation="date-time"
+                    containerClassName="visita-dropdown"
+                  />
                 </div>
 
                 {/* form - Textarea/Message (order: 7) */}
@@ -272,31 +262,6 @@ const Visita: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Modals for Date Pickers - Outside form container */}
-        <IonModal ref={modalInicio} keepContentsMounted={true}>
-          <IonDatetime
-            style={{ margin: "0 auto" }}
-            showDefaultButtons={true}
-            presentation="date-time"
-            onIonChange={(e) => setFechaInicio(e.detail.value ? moment(e.detail.value.toString()).format("yyyy-MM-DDTHH:mm:ss") : "")}
-            min={fechaMin}
-            max={fechaMax}
-            value={fechaInicio}
-          />
-        </IonModal>
-
-        <IonModal ref={modalFin} keepContentsMounted={true}>
-          <IonDatetime
-            style={{ margin: "0 auto" }}
-            showDefaultButtons={true}
-            presentation="date-time"
-            onIonChange={(e) => setFechaFin(e.detail.value ? moment(e.detail.value.toString()).format("yyyy-MM-DDTHH:mm:ss") : "")}
-            min={fechaMin}
-            max={fechaMax}
-            value={fechaFin}
-          />
-        </IonModal>
       </IonContent>
     </IonPage>
   );

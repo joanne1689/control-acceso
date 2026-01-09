@@ -4,8 +4,6 @@ import {
   IonInput, 
   IonLoading, 
   IonPage, 
-  IonSelect,
-  IonSelectOption,
   useIonRouter, 
   useIonToast 
 } from '@ionic/react';
@@ -17,6 +15,8 @@ import httpClient from '../../hooks/CapacitorClient';
 import { formatearRut, handleRutDown, validarDigV } from '../../utils/RutFormatter';
 import moment from 'moment';
 import Header from '../components/Header';
+import Dropdown from '../components/Dropdown';
+import DatePicker from '../components/DatePicker';
 
 interface Campos {
   rut: string;
@@ -206,135 +206,43 @@ const Registrar: React.FC = () => {
                 {/* Frame 398 - Dropdowns Row */}
                 <div className="registrar-dropdown-row">
                   {/* Dropdown - Rol */}
-                  <div className="registrar-dropdown">
-                    <div className="registrar-dropdown-inner">
-                      <IonSelect
-                        className="registrar-select"
-                        placeholder="Rol"
-                        interface="popover"
-                        {...form.register("rol")}
-                      >
-                        {(rolesRegistro || []).map(({ value, label }) => (
-                          <IonSelectOption key={`rol_${value}`} value={value}>
-                            {label}
-                          </IonSelectOption>
-                        ))}
-                      </IonSelect>
-                      {/* Icon/Solid/cheveron-down */}
-                      <svg 
-                        className="registrar-chevron-icon" 
-                        width="20" 
-                        height="20" 
-                        viewBox="0 0 20 20" 
-                        fill="none" 
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path 
-                          fillRule="evenodd" 
-                          clipRule="evenodd" 
-                          d="M5.29289 7.29289C5.68342 6.90237 6.31658 6.90237 6.70711 7.29289L10 10.5858L13.2929 7.29289C13.6834 6.90237 14.3166 6.90237 14.7071 7.29289C15.0976 7.68342 15.0976 8.31658 14.7071 8.70711L10.7071 12.7071C10.3166 13.0976 9.68342 13.0976 9.29289 12.7071L5.29289 8.70711C4.90237 8.31658 4.90237 7.68342 5.29289 7.29289Z" 
-                          fill="#828787"
-                        />
-                      </svg>
-                    </div>
-                  </div>
+                  <Dropdown
+                    placeholder="Rol"
+                    options={rolesRegistro || []}
+                    register={form.register("rol")}
+                    containerClassName="registrar-dropdown"
+                    className="registrar-select"
+                  />
 
                   {/* Dropdown - Nro. Unidad */}
-                  <div className="registrar-dropdown">
-                    <div className="registrar-dropdown-inner">
-                      <IonSelect
-                        className="registrar-select"
-                        placeholder="Nro. Unidad"
-                        interface="popover"
-                        {...form.register("sala")}
-                      >
-                        {(unidades || []).map(({ value, label }) => (
-                          <IonSelectOption key={`unidad_${value}`} value={value}>
-                            {label}
-                          </IonSelectOption>
-                        ))}
-                      </IonSelect>
-                      {/* Icon/Solid/cheveron-down */}
-                      <svg 
-                        className="registrar-chevron-icon" 
-                        width="20" 
-                        height="20" 
-                        viewBox="0 0 20 20" 
-                        fill="none" 
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path 
-                          fillRule="evenodd" 
-                          clipRule="evenodd" 
-                          d="M5.29289 7.29289C5.68342 6.90237 6.31658 6.90237 6.70711 7.29289L10 10.5858L13.2929 7.29289C13.6834 6.90237 14.3166 6.90237 14.7071 7.29289C15.0976 7.68342 15.0976 8.31658 14.7071 8.70711L10.7071 12.7071C10.3166 13.0976 9.68342 13.0976 9.29289 12.7071L5.29289 8.70711C4.90237 8.31658 4.90237 7.68342 5.29289 7.29289Z" 
-                          fill="#828787"
-                        />
-                      </svg>
-                    </div>
-                  </div>
+                  <Dropdown
+                    placeholder="Nro. Unidad"
+                    options={unidades || []}
+                    register={form.register("sala")}
+                    containerClassName="registrar-dropdown"
+                    className="registrar-select"
+                  />
                 </div>
 
                 {/* Frame 399 - Date Pickers Row */}
                 <div className="registrar-date-row">
-                  {/* Dropdown - Inicio */}
-                  <div className="registrar-dropdown">
-                    <div className="registrar-dropdown-inner">
-                      <span className="registrar-date-label">Inicio</span>
-                      {/* Calendar Icon */}
-                      <svg 
-                        className="registrar-calendar-icon" 
-                        width="14" 
-                        height="14" 
-                        viewBox="0 0 14 14" 
-                        fill="none" 
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path 
-                          d="M9.33333 0.166672V2.50001M4.66667 0.166672V2.50001M1.75 4.83334H12.25M2.91667 1.33334H11.0833C11.7277 1.33334 12.25 1.85568 12.25 2.50001V10.6667C12.25 11.311 11.7277 11.8333 11.0833 11.8333H2.91667C2.27233 11.8333 1.75 11.311 1.75 10.6667V2.50001C1.75 1.85568 2.27233 1.33334 2.91667 1.33334Z" 
-                          stroke="#828787" 
-                          strokeWidth="1.5" 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      <input
-                        type="date"
-                        className="registrar-date-input"
-                        value={fechaInicio}
-                        onChange={(e) => setFechaInicio(e.target.value)}
-                      />
-                    </div>
-                  </div>
+                  {/* DatePicker - Inicio */}
+                  <DatePicker
+                    label="Inicio"
+                    value={fechaInicio}
+                    onChange={(e) => setFechaInicio(e.detail.value ? moment(e.detail.value.toString()).format("yyyy-MM-DD") : "")}
+                    presentation="date"
+                    containerClassName="registrar-dropdown"
+                  />
 
-                  {/* Dropdown - Fin */}
-                  <div className="registrar-dropdown">
-                    <div className="registrar-dropdown-inner">
-                      <span className="registrar-date-label">Fin</span>
-                      {/* Calendar Icon */}
-                      <svg 
-                        className="registrar-calendar-icon" 
-                        width="14" 
-                        height="14" 
-                        viewBox="0 0 14 14" 
-                        fill="none" 
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path 
-                          d="M9.33333 0.166672V2.50001M4.66667 0.166672V2.50001M1.75 4.83334H12.25M2.91667 1.33334H11.0833C11.7277 1.33334 12.25 1.85568 12.25 2.50001V10.6667C12.25 11.311 11.7277 11.8333 11.0833 11.8333H2.91667C2.27233 11.8333 1.75 11.311 1.75 10.6667V2.50001C1.75 1.85568 2.27233 1.33334 2.91667 1.33334Z" 
-                          stroke="#828787" 
-                          strokeWidth="1.5" 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      <input
-                        type="date"
-                        className="registrar-date-input"
-                        value={fechaFin}
-                        onChange={(e) => setFechaFin(e.target.value)}
-                      />
-                    </div>
-                  </div>
+                  {/* DatePicker - Fin */}
+                  <DatePicker
+                    label="Fin"
+                    value={fechaFin}
+                    onChange={(e) => setFechaFin(e.detail.value ? moment(e.detail.value.toString()).format("yyyy-MM-DD") : "")}
+                    presentation="date"
+                    containerClassName="registrar-dropdown"
+                  />
                 </div>
 
                 {/* Button - Confirmar */}
